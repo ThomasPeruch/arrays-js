@@ -1,11 +1,21 @@
-const users = [
-    {name: 'Connor Kenway', premium : true},
-    {name: 'Ezio Auditore', premium : true},
-    {name: 'Arno Dorian', premium : false},
-    {name: 'Jacob Frye', premium : false},
-    {name: 'Bayef of Siwa', premium : true},
+const levelScores = [
+    { name: 'Vinicius Costa', score: 337 },
+    { name: 'Roger Melo', score: 43 },
+    { name: 'Alfredo Braga', score: 234 },
+    { name: 'Pedro H. Silva', score: 261 },
+    { name: 'Ana Paula Rocha', score: 491 },
+    { name: 'Vinicius Costa', score: 167 },
+    { name: 'Roger Melo', score: 137 },
+    { name: 'Alfredo Braga', score: 135 },
+    { name: 'Ana Paula Rocha', score: 359 },
+    { name: 'Pedro H. Silva', score: 133 }
 ]
 
-const premiumUser = users.filter(user => user.premium)
+const rogerScore = levelScores.reduce((accumulator, levelPerScore) => {
+    if(levelPerScore.name === 'Roger Melo'){
+        accumulator += levelPerScore.score
+    }
+    return accumulator
+}, 0)
 
-console.log(premiumUser)
+console.log(rogerScore)
