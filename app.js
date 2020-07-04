@@ -1,18 +1,11 @@
-const products = [
-    { name:'Mouse Wireless', price: 30 },
-    { name:'Pen Drive', price: 25 },
-    { name:'Cartucho de tinta', price: 50 },
-    { name:'Suporte para Notebbok', price: 23 },
-    { name:'Repetidor de Sinal Wi-Fi', price: 44 },
+const users = [
+    {name: 'Connor Kenway', premium : true},
+    {name: 'Ezio Auditore', premium : true},
+    {name: 'Arno Dorian', premium : false},
+    {name: 'Jacob Frye', premium : false},
+    {name: 'Bayef of Siwa', premium : true},
 ]
 
-const saleProducts = products.map(product => {
-    if(product.price >= 30){
-        return {name: product.name, price: product.price / 2}
-    }
+const premiumUser = users.filter(user => user.premium)
 
-    return product
-})
-
-console.log(saleProducts);
-console.log(products);
+console.log(premiumUser)
